@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Maciej Czarkowski</title>
+</head>
+<body>
+<div class="pass-view display-none">
+    <div >
+        <div class="information-pass-form">Thank you for the well completed form:</div>
+        <div class="margin-form"> <span class="information-pass-form">E-mail:</span>      <span class="email-pass">   </span></div>
+        <div class="margin-form"> <span class="information-pass-form">Phone:</span>       <span class="phone-pass">   </span></div>
+        <div class="margin-form"> <span class="information-pass-form">Name:</span>        <span class="name-pass">    </span></div>
+        <div class="margin-form"> <span class="information-pass-form">Message:</span>     <span class="message-pass"> </span></div>
+    </div>
+</div>
+<div class="box">
+    <h1 class="header-info">Contact form :</h1>
+    <div class="container">
+        <label>
+            <span>E-mail:</span>
+            <input type="text" class="input-field" name="email" id="email"/>
+            <label class="email display-none">Invalid Email</label>
+        </label>
+        <label>
+            <span>Phone:</span>
+            <input class="input-field"
+                   name="phone"
+                   id="phone"
+                   type="text"
+            />
+        </label>
+        <label class="phone display-none">Invalid phone number</label>
+        <label>
+            <span>Name:</span>
+            <input maxlength="30" type="text" class="input-field" name="name" id="name"/>
+        </label>
+    </div>
+    <div class="container">
+        <label>
+            <span>Message:</span>
+            <textarea class="message" name="message" id="message"></textarea>
+            <label class="messageText display-none"></label>
+        </label>
+    </div>
+    <div class="button-container">
+        <input type="button" class="button" value="Send"/>
+    </div>
+</div>
+</body>
+</html>
