@@ -51,26 +51,41 @@ window.onload=function() {
     }
 
     function emailValidation() {
-        if(!email.value.match(regexEmail)) {
-            emailInfoValid.classList.replace('display-none','error')
-            emailValid = false;
+        let emailErrorText = ''
+        if(email.value) {
+            if (!email.value.match(regexEmail)) {
+                emailErrorText = 'Wrong Email'
+                emailValid = false;
+            }
+            else {
+                emailInfoValid.classList.add('display-none')
+                emailValid = true;
+            }
         }
         else {
-            emailInfoValid.classList.add('display-none')
-            emailValid = true;
+            emailErrorText = 'Email required'
         }
+        emailInfoValid.classList.replace('display-none', 'error')
+        emailInfoValid.innerHTML = emailErrorText
     }
 
     function phoneValidation() {
-
-        if(!phone.value.match(regexPhone)) {
-            phoneInfoValid.classList.replace('display-none','error')
-            phoneValid = false;
+        let phoneErrorText = '';
+        if(phone.value) {
+            if (!phone.value.match(regexPhone)) {
+                phoneErrorText = 'Wrong Phone No'
+                phoneValid = false;
+            }
+            else {
+                phoneInfoValid.classList.add('display-none')
+                phoneValid = true;
+            }
         }
         else {
-            phoneInfoValid.classList.add('display-none')
-            phoneValid = true;
+            phoneErrorText = 'Phone no required'
         }
+        phoneInfoValid.classList.replace('display-none','error')
+        phoneInfoValid.innerHTML = phoneErrorText
     }
 
     function messageValidation() {
